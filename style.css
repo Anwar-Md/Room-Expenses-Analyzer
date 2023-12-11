@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    margin-top: 10px;
+}
+
+/* Header Styles */
+.bg-primary {
+    background: #2196F3;
+    color: #fff;
+}
+
+/* Form Styles */
+#expense-form {
+    transition: box-shadow 0.3s ease-in-out;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#expense-form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Buttons Styles */
+.category-btn {
+    margin: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #2196F3;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.category-btn.selected {
+    background-color: #4CAF50 !important;
+}
+
+/* Last Entry Styles */
+#last-entry {
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Table Styles */
+#expense-table {
+    margin-top: 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#expense-table th,
+#expense-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+#expense-table th {
+    background-color: rgb(204, 57, 217);
+    color: #fff;
+}
+
+#expense-table tbody, tr:nth-child(even) {
+    background-color: #19b4a9;
+}
+
+#expense-table tbody, tr:nth-child(odd) {
+    background-color: #3498db;
+    ;
+}
+
+#expense-table tbody, tr:hover {
+    background-color: #d0d0d0;
+}
+
+/* Export to Excel Button */
+#export-excel-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#export-excel-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .col-md-8,
+    .col-md-4 {
+        margin-top: 5px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    #expense-form {
+        padding: 15px;
+        max-width: none;
+    }
+
+    #expense-table th,
+    #expense-table td {
+        padding: 8px;
+    }
+}

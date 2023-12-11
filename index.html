@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Expenses Analyzer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center text-white bg-primary p-4 mb-5">Room Expenses Analyzer</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <form id="expense-form" class="bg-white p-4 rounded shadow">
+                    <div class="form-group">
+                        <label for="month">Month</label>
+                        <select id="month" class="form-control">
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="text" id="amount" class="form-control" placeholder="Enter amount...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Category">Category</label>
+                        <div class="layout">
+                            <button type="button" class="category-btn btn btn-primary" onclick="setCategory(this)">Rent</button>
+                            <button type="button" class="category-btn btn btn-primary" onclick="setCategory(this)">Electricity Bill</button>
+                            <button type="button" class="category-btn btn btn-primary" onclick="setCategory(this)">Gas Bill</button>
+                            <button type="button" class="category-btn btn btn-primary" onclick="setCategory(this)">Rice Bag</button>
+                            <button type="button" class="category-btn btn btn-primary" onclick="setCategory(this)">Groceries</button>
+                            <button type="button" class="category-btn btn btn-primary" onclick="setCategory(this)">Water Bill</button>
+                            <button type="button" class="category-btn btn btn-primary" onclick="setCategory(this)">Other Bills</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-block mt-3">Enter</button>
+                    <input type="hidden" id="selected-category" value="">
+                    <div id="last-entry" class="mt-4 rounded p-4 bg-white shadow">
+                        <h2><b>Last Entry</b></h2>
+                        <p id="last-entry-info"></p>
+                        <button type="button" class="btn btn-secondary btn-block mt-3" onclick="pop()">Undo</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-8">
+                <table id="expense-table" class="table table-bordered table-striped mt-4">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Rent</th>
+                            <th>Electricity Bill</th>
+                            <th>Gas Bill</th>
+                            <th>Rice Bag</th>
+                            <th>Groceries</th>
+                            <th>Water Bill</th>
+                            <th>Other Bills</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- ... table body ... -->
+                    </tbody>
+                </table>
+                <button id="export-excel-btn" class="btn btn-success btn-block mt-3 btn-sm" onclick="exportToExcel()">Export to Excel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
